@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ToDo List</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Slabo+27px|Source+Sans+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <style>
+    .item{
+    background-color: rgb(204, 255, 204);
+    padding-top: 20px;
+    width: 80%;
+    margin: 30px auto 0px auto;
+    height: 150px;
+    border:2px solid grey; 
+}
+
+.updowndiv{
+    width:300px; 
+    margin:auto; 
+    padding-top: 10px
+}
+ul {
+  list-style-type: none;
+}
+.lis{
+    width: 60%;
+    margin: auto
+}
+.outer{
+    border: 2px solid green;
+}
+i{
+    margin-right: 10px;
+}
+.div4{
+    background-color: antiquewhite;
+}
+.setcolor{
+    background-color: rgb(255, 159, 159);
+}
+    </style>
+</head >
+    <body  style="background-color: #F8F9FA" class="bc">
+        
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #e3f2fd;">
+            <a class="navbar-brand " href="#"><img class="logo" width="30" height="30" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAb1BMVEX///8AAADu7u76+vrz8/PV1dUdHR2GhoZLS0ufn58jIyPi4uL4+PgNDQ2Dg4P8/PxYWFiurq5PT0+UlJSOjo7CwsIpKSlAQEBdXV17e3tzc3Ph4eEZGRk6OjrZ2dm6urrLy8u/v7+np6dnZ2cxMTED7mypAAAExUlEQVR4nO2d63aqMBBGU1RaQLmopV5atZf3f8ZTa/UQmCR1MSHJMPtnV6rZixUgky9RCIZhGIZhGIZhGHyyKi/rxUOYLOoyrzKd3jRJXXcSgTSZKvyireu+obGNIMHEdbdQSTp+Rem6T8iURWsE1q57hE4tjcbIdXes0BiMk9h1Z6wQT26GS9d9scSS5l20SUJ5EF64DMWd625YZEf9El4u4tp1J6yy/jak+aS4En9Pl1z3wTJ7UbnugmUqkbvugmVysu8zV5aCwqxeRypCrcn8lYWA/77KotDIFK/XsOGHopTjNx93GKqKVX4zvcOwMH+chxR3GE7MH+chEzZkQ+9hQzb0HzZkQ/9hQzb0HzZkwwbzw/EjqZ7BwIND0AyPtwJknGvjOUODZNiq95T74QxMoBhm3czGakgJLRiGJ6jxZlANDQiGM7DxQwm1nR9mdjgoC4H9DZULcdtuU5sRq7eZLUP1EsfxbxcbjcqOoS6U0mpqfTEEfBT3NYT//xf5hnrsr2BgbcMQXhW4fU4T++GHJdDB3oZv2q88NZs+9jYw8WTBEF72uPEYviH4sP/PS/iG+mEoD8QwDU0BxvANTffH5pJjmIb0r6EpOxW+4UH/ldIUKkxDRSzlirSDI1DDT+1XSsWMQA21j3zpgS9W/RUMgHWF3rMn3Yvps9TSMGYRACeIvQ0109r2q/4Gw0LDK9Q/hDm+evdeZ0JqN9OZwrVohErUi+Ibn7tN3z+/YjukG1XqDqOa+AW2hqsmw4NhWDwBjdtlKGfgVPU7r6cv/ixdIK1bRFL0/e19OAEjaGtPk+PuMh7L1WGozv8J3BXSaeRfBpXXgNnQf9iQDf2HDdnQfzANJ4fZaebPK/cvaIb7x2uoZlN59eqGZHiSp4hrjxxRDItujQkoYTgCwzB6BRqDqQEXIBgqDpjIwcbzqSUsGs5VMRng2Km1vR3UrztFsLW/oboI2o5hRZYjQ3Dsq7ehJgdUt5rqkykIgB3sbQjdZa7IJVNDbgOB7rhAMNRGuVKpqf1MFBj47GuoX4qQRkaY64dz/VdK0b0wDQ2RUWl9LUxD+lkM+nka0/2x+S9hGtK/hvTHIf17Kf3nIf13mhG8l9KfW4xgfkh/jj+COg39WtsI6qUjqHkL+usWZ6ivPV0+i/b6obewIRv6Dxuyof+wIRvKkM55U8/qk99v0dk8SWzPDP19T+T3rpHff0h+Dyn9fcDk93LT349P/0wF/VcSOBeD/tkm9LMY9PM0fE5U+NeQ/nlt9M/co39uIv2zL0dwfin9M2jpnyMsRPc89itEzoIewXne9M9kH8G5+iP4bQRB//ctzlD/jZIz1H9nxlvYkA39hw3Z0H/YkA39hw3Z0H/YkA395x5D9R4/n4EXj2BDVXLMb+CogSJEkmRRcCiyFPaXGByz0PwwJQ1SyzlJ9yxFbm4UNLkx6xQ6ldi77oJlMiFi132wSiyGiBW45LzgrzgKggg/ays7172wyO7ndY7yRfxdHjPFDsPlls2m+l7zPzk1ofnEiBsTeZpDUVqjnqrzTqFStwoVhc0QkwvK7j5lWndU8EC3SL37LjS2qpjINKEw408Tbakwq/KyDrV2s6jLvPIqxMQwDMMwDMMwDBn+ARO/jfdWLEfGAAAAAElFTkSuQmCC"> ToDo's
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home 
+                            <span class="sr-only">(current)
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About                             
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Feature</a>
+                    </li>  
+                </ul>
+                <div style="margin-left: auto"> 
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Sign Up                             
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Sign In                                
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+                    
+                    
+        </nav>
+        <div class="jumbotron">
+            <h1 class="display-4">TO-DO LIST</h1>
+            <p class="lead">This is a simple page to manage your todo's.</p>
+            <hr class="my-4">
+            <p>you can used several options available also.</p>
+            <a class="btn btn-primary btn-lg" href="#" role="button">Know More</a>
+            </div>
+        <div style="width: 100%; height:200px; background-color:#E1DDDD; padding: 30px;" >
+            <div style="width: 450px; margin:0 auto;">
+                 <!-- <form class="form-inline">  -->
+                        <span style="background-color: #4443BB; width: 44px; float:left; margin-top: 2px" class="input-group-text" id="basic-addon1 " ><img  width="20" height="20" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAb1BMVEX///8AAADu7u76+vrz8/PV1dUdHR2GhoZLS0ufn58jIyPi4uL4+PgNDQ2Dg4P8/PxYWFiurq5PT0+UlJSOjo7CwsIpKSlAQEBdXV17e3tzc3Ph4eEZGRk6OjrZ2dm6urrLy8u/v7+np6dnZ2cxMTED7mypAAAExUlEQVR4nO2d63aqMBBGU1RaQLmopV5atZf3f8ZTa/UQmCR1MSHJMPtnV6rZixUgky9RCIZhGIZhGIZhGHyyKi/rxUOYLOoyrzKd3jRJXXcSgTSZKvyireu+obGNIMHEdbdQSTp+Rem6T8iURWsE1q57hE4tjcbIdXes0BiMk9h1Z6wQT26GS9d9scSS5l20SUJ5EF64DMWd625YZEf9El4u4tp1J6yy/jak+aS4En9Pl1z3wTJ7UbnugmUqkbvugmVysu8zV5aCwqxeRypCrcn8lYWA/77KotDIFK/XsOGHopTjNx93GKqKVX4zvcOwMH+chxR3GE7MH+chEzZkQ+9hQzb0HzZkQ/9hQzb0HzZkwwbzw/EjqZ7BwIND0AyPtwJknGvjOUODZNiq95T74QxMoBhm3czGakgJLRiGJ6jxZlANDQiGM7DxQwm1nR9mdjgoC4H9DZULcdtuU5sRq7eZLUP1EsfxbxcbjcqOoS6U0mpqfTEEfBT3NYT//xf5hnrsr2BgbcMQXhW4fU4T++GHJdDB3oZv2q88NZs+9jYw8WTBEF72uPEYviH4sP/PS/iG+mEoD8QwDU0BxvANTffH5pJjmIb0r6EpOxW+4UH/ldIUKkxDRSzlirSDI1DDT+1XSsWMQA21j3zpgS9W/RUMgHWF3rMn3Yvps9TSMGYRACeIvQ0109r2q/4Gw0LDK9Q/hDm+evdeZ0JqN9OZwrVohErUi+Ibn7tN3z+/YjukG1XqDqOa+AW2hqsmw4NhWDwBjdtlKGfgVPU7r6cv/ixdIK1bRFL0/e19OAEjaGtPk+PuMh7L1WGozv8J3BXSaeRfBpXXgNnQf9iQDf2HDdnQfzANJ4fZaebPK/cvaIb7x2uoZlN59eqGZHiSp4hrjxxRDItujQkoYTgCwzB6BRqDqQEXIBgqDpjIwcbzqSUsGs5VMRng2Km1vR3UrztFsLW/oboI2o5hRZYjQ3Dsq7ehJgdUt5rqkykIgB3sbQjdZa7IJVNDbgOB7rhAMNRGuVKpqf1MFBj47GuoX4qQRkaY64dz/VdK0b0wDQ2RUWl9LUxD+lkM+nka0/2x+S9hGtK/hvTHIf17Kf3nIf13mhG8l9KfW4xgfkh/jj+COg39WtsI6qUjqHkL+usWZ6ivPV0+i/b6obewIRv6Dxuyof+wIRvKkM55U8/qk99v0dk8SWzPDP19T+T3rpHff0h+Dyn9fcDk93LT349P/0wF/VcSOBeD/tkm9LMY9PM0fE5U+NeQ/nlt9M/co39uIv2zL0dwfin9M2jpnyMsRPc89itEzoIewXne9M9kH8G5+iP4bQRB//ctzlD/jZIz1H9nxlvYkA39hw3Z0H/YkA39hw3Z0H/YkA395x5D9R4/n4EXj2BDVXLMb+CogSJEkmRRcCiyFPaXGByz0PwwJQ1SyzlJ9yxFbm4UNLkx6xQ6ldi77oJlMiFi132wSiyGiBW45LzgrzgKggg/ays7172wyO7ndY7yRfxdHjPFDsPlls2m+l7zPzk1ofnEiBsTeZpDUVqjnqrzTqFStwoVhc0QkwvK7j5lWndU8EC3SL37LjS2qpjINKEw408Tbakwq/KyDrV2s6jLvPIqxMQwDMMwDMMwDBn+ARO/jfdWLEfGAAAAAElFTkSuQmCC"></span>
+                    <div class="form-group mx-sm-3 mb-2" style="float: left">
+                        <input type="text" id="input" class="form-control" placeholder="Enter New Task" aria-label="task" aria-describedby="basic-addon1" width="50%">
+                    </div>
+                    <button type="submit" class="btn btn-danger mb-2" id="add"><i class="fas fa-plus"></i></button>
+                 <!-- </form>  -->
+            </div>
+        <div style=" width:500px; margin:auto; padding-top: 10px">
+                                <button id="delete" class="btn btn-info btn-lg"><i class="fas fa-trash-alt" style="margin-right: 10px"></i>DELETE SELECTED</button>
+                                <button id="sort" class="btn btn-success btn-lg"><i class="fas fa-sort-amount-down option" style="margin-right: 10px"></i>SORT LIST</button>
+                        </div>
+                        </div>
+       <div style="width: 60%; padding:20px; margin:20px auto;background-color: rgb(255, 228, 175);" class="rounded border-danger outer">
+            <ul id="list">
+                
+            </ul>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<script src="todolist.js"></script>
+</body>
+</html>
